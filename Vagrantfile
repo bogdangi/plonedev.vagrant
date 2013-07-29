@@ -30,7 +30,7 @@ Vagrant::Config.run do |config|
     end
 
     # install Plone
-        config.vm.provision :shell do |shell|
+    config.vm.provision :shell do |shell|
         shell.path = "manifests/install_plone.sh"
         shell.args = UI_URL + " '" + UI_OPTIONS + "'"
     end
